@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'translate',
+    loadChildren: () => import('./translate/translate.module').then( m => m.TranslatePageModule)
+  },
 ];
 
 @NgModule({
